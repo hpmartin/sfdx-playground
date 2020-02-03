@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="HelloWorldApexController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="greeting" type="String" default="World"/>
+    <div class="slds-card">
+        <div class="slds-card__body slds-card__body_inner slds-p-top_medium">
+            Hello, {!v.greeting}
+        </div>
+    </div>
+</aura:component>
