@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Titulo_Obligatorio</fullName>
+    <active>true</active>
+    <description>El campo título debe estar informado</description>
+    <errorConditionFormula>ISBLANK( Title )</errorConditionFormula>
+    <errorDisplayField>Title</errorDisplayField>
+    <errorMessage>El campo título debe estar informado</errorMessage>
+</ValidationRule>
