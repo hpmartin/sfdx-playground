@@ -7,8 +7,8 @@ public without sharing class HelloWorldApexController {
     public static UserData findUserName(){
         User us = [Select Name, LastLoginDate from User where Id = :UserInfo.getUserId()];        
         UserData ud = new UserData();
-        ud.Name = us.Name;
-        ud.LastLogin = us.LastLoginDate.format();
+        ud.name = us.Name;
+        ud.lastLogin = us.LastLoginDate.format();
         return ud;
     }
     
@@ -16,7 +16,7 @@ public without sharing class HelloWorldApexController {
      * Pojo para la comunicación con el apex component
      */
     public class UserData {
-        @AuraEnabled public String Name { get; set; }
-        @AuraEnabled public String LastLogin { get; set; }
+        @AuraEnabled public String name { get; set; }
+        @AuraEnabled public String lastLogin { get; set; }
     }
 }
