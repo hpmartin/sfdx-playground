@@ -5,9 +5,9 @@ public without sharing class HelloWorldApexController {
 	
     @auraEnabled
     public static UserData findUserName(){
-        User us = [Select Name, LastLoginDate from User where Id = :UserInfo.getUserId()];        
+        User us = [Select FirstName, LastLoginDate from User where Id = :UserInfo.getUserId()];        
         UserData ud = new UserData();
-        ud.name = us.Name;
+        ud.name = us.FirstName;
         ud.lastLogin = us.LastLoginDate.format();
         return ud;
     }
